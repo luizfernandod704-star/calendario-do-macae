@@ -1,0 +1,1516 @@
+/* =====================================================
+   CALENDÁRIO DO MACAÉ
+   DESIGN MODERNO
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   VARIÁVEIS
+===================================================== */
+
+:root {
+    --preto: #06080c;
+    --preto-2: #0b0f15;
+    --preto-3: #111720;
+
+    --azul: #087cff;
+    --azul-claro: #35a1ff;
+    --azul-escuro: #005dcc;
+
+    --branco: #ffffff;
+    --cinza: #9aa4b2;
+
+    --borda: rgba(255, 255, 255, 0.08);
+
+    --vermelho: #ff3b3b;
+
+    --sombra:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+
+    --transicao: 0.25s ease;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            rgba(0, 110, 255, 0.14),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at bottom left,
+            rgba(0, 110, 255, 0.08),
+            transparent 28%
+        ),
+
+        var(--preto);
+
+    color: var(--branco);
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   TOPO
+===================================================== */
+
+.topo {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 500;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(6, 8, 12, 0.98),
+            rgba(6, 8, 12, 0.92)
+        );
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    border-bottom:
+        1px solid
+        rgba(8, 124, 255, 0.25);
+
+    min-height:
+        92px;
+
+    padding:
+        18px 4%;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.30);
+}
+
+
+/* =====================================================
+   TÍTULO / LOGO
+===================================================== */
+
+.logo {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        13px;
+
+    width:
+        100%;
+
+    text-align:
+        center;
+}
+
+
+.logo span {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--azul),
+            var(--azul-escuro)
+        );
+
+    border-radius:
+        14px;
+
+    font-size:
+        24px;
+
+    box-shadow:
+        0 8px 28px
+        rgba(0, 110, 255, 0.30);
+}
+
+
+.logo h1 {
+
+    font-size:
+        31px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -0.9px;
+
+    text-align:
+        center;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #66b4ff,
+            #ffffff
+        );
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    text-shadow:
+        0 0 25px
+        rgba(8, 124, 255, 0.18);
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu {
+
+    position:
+        absolute;
+
+    right:
+        4%;
+
+    display:
+        flex;
+
+    gap:
+        8px;
+}
+
+
+.menu button {
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color:
+        white;
+
+    border:
+        1px solid
+        var(--borda);
+
+    padding:
+        10px 16px;
+
+    border-radius:
+        10px;
+
+    cursor:
+        pointer;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    transition:
+        var(--transicao);
+}
+
+
+.menu button:hover {
+
+    background:
+        var(--azul);
+
+    border-color:
+        var(--azul);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 22px
+        rgba(0, 110, 255, 0.25);
+}
+
+
+/* =====================================================
+   ÁREA PRINCIPAL
+===================================================== */
+
+main {
+
+    width:
+        94%;
+
+    max-width:
+        1450px;
+
+    margin:
+        35px auto 60px;
+}
+
+
+/* =====================================================
+   CABEÇALHO DO CALENDÁRIO
+===================================================== */
+
+.cabecalho-calendario {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(17, 23, 32, 0.96),
+            rgba(10, 14, 20, 0.96)
+        );
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius:
+        18px;
+
+    padding:
+        18px 22px;
+
+    margin-bottom:
+        15px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    box-shadow:
+        var(--sombra);
+}
+
+
+.cabecalho-calendario h2 {
+
+    font-size:
+        27px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -0.7px;
+}
+
+
+/* =====================================================
+   BOTÕES DOS MESES
+===================================================== */
+
+.cabecalho-calendario button {
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color:
+        white;
+
+    font-size:
+        20px;
+
+    cursor:
+        pointer;
+
+    transition:
+        var(--transicao);
+}
+
+
+.cabecalho-calendario button:hover {
+
+    background:
+        var(--azul);
+
+    border-color:
+        var(--azul);
+
+    transform:
+        scale(1.06);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 110, 255, 0.25);
+}
+
+
+/* =====================================================
+   DIAS DA SEMANA
+===================================================== */
+
+.semana {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap:
+        7px;
+
+    margin-bottom:
+        7px;
+}
+
+
+.semana div {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--azul),
+            var(--azul-escuro)
+        );
+
+    color:
+        white;
+
+    text-align:
+        center;
+
+    padding:
+        13px 5px;
+
+    border-radius:
+        10px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.5px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 110, 255, 0.15);
+}
+
+
+/* =====================================================
+   GRID DOS DIAS
+===================================================== */
+
+.dias {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap:
+        7px;
+}
+
+
+/* =====================================================
+   CADA DIA
+===================================================== */
+
+.dia {
+
+    position:
+        relative;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(17, 23, 32, 0.98),
+            rgba(11, 15, 21, 0.98)
+        );
+
+    min-height:
+        135px;
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius:
+        12px;
+
+    padding:
+        11px;
+
+    cursor:
+        pointer;
+
+    overflow:
+        hidden;
+
+    transition:
+
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+.dia:hover {
+
+    border-color:
+        rgba(8, 124, 255, 0.65);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+
+        0 12px 30px
+        rgba(0, 0, 0, 0.35),
+
+        0 0 0 1px
+        rgba(8, 124, 255, 0.08);
+}
+
+
+/* =====================================================
+   NÚMERO DO DIA
+===================================================== */
+
+.numero-dia {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    font-size:
+        15px;
+
+    font-weight:
+        700;
+
+    color:
+        white;
+
+    margin-bottom:
+        8px;
+}
+
+
+/* =====================================================
+   PONTINHO VERMELHO
+===================================================== */
+
+.indicador {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    background:
+        var(--vermelho);
+
+    border-radius:
+        50%;
+
+    display:
+        inline-block;
+
+    box-shadow:
+        0 0 10px
+        rgba(255, 59, 59, 0.8);
+}
+
+
+/* =====================================================
+   ANOTAÇÕES
+===================================================== */
+
+.anotacao-preview {
+
+    background:
+        rgba(8, 124, 255, 0.09);
+
+    border-left:
+        3px solid
+        var(--azul);
+
+    padding:
+        7px 8px;
+
+    border-radius:
+        6px;
+
+    margin-top:
+        5px;
+
+    font-size:
+        12px;
+
+    color:
+        #dce8f7;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+}
+
+
+/* =====================================================
+   GASTOS
+===================================================== */
+
+.titulo-gastos {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(17, 23, 32, 0.96),
+            rgba(10, 14, 20, 0.96)
+        );
+
+    border:
+        1px solid
+        var(--borda);
+
+    border-radius:
+        18px;
+
+    padding:
+        20px 22px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom:
+        18px;
+
+    box-shadow:
+        var(--sombra);
+}
+
+
+.titulo-gastos h2 {
+
+    font-size:
+        24px;
+}
+
+
+/* =====================================================
+   BOTÃO NOVO GASTO
+===================================================== */
+
+.titulo-gastos button {
+
+    border:
+        none;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--azul),
+            var(--azul-escuro)
+        );
+
+    color:
+        white;
+
+    padding:
+        12px 18px;
+
+    border-radius:
+        10px;
+
+    cursor:
+        pointer;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    transition:
+        var(--transicao);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 110, 255, 0.20);
+}
+
+
+.titulo-gastos button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 110, 255, 0.30);
+}
+
+
+/* =====================================================
+   GASTO
+===================================================== */
+
+.gasto {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(17, 23, 32, 0.98),
+            rgba(11, 15, 21, 0.98)
+        );
+
+    border:
+        1px solid
+        var(--borda);
+
+    margin-top:
+        9px;
+
+    padding:
+        17px;
+
+    border-radius:
+        12px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    transition:
+        var(--transicao);
+}
+
+
+.gasto:hover {
+
+    border-color:
+        rgba(8, 124, 255, 0.45);
+
+    transform:
+        translateX(3px);
+}
+
+
+.gasto button {
+
+    background:
+        rgba(255, 59, 59, 0.12);
+
+    color:
+        #ff5555;
+
+    border:
+        1px solid
+        rgba(255, 59, 59, 0.2);
+
+    padding:
+        8px 11px;
+
+    border-radius:
+        8px;
+
+    cursor:
+        pointer;
+
+    transition:
+        var(--transicao);
+}
+
+
+.gasto button:hover {
+
+    background:
+        var(--vermelho);
+
+    color:
+        white;
+}
+
+
+/* =====================================================
+   TOTAL
+===================================================== */
+
+.total-gastos {
+
+    margin-top:
+        18px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--azul),
+            var(--azul-escuro)
+        );
+
+    padding:
+        20px;
+
+    border-radius:
+        14px;
+
+    font-size:
+        21px;
+
+    font-weight:
+        700;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 110, 255, 0.20);
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    background:
+        rgba(0, 0, 0, 0.78);
+
+    backdrop-filter:
+        blur(7px);
+
+    -webkit-backdrop-filter:
+        blur(7px);
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        20px;
+
+    z-index:
+        1000;
+
+    animation:
+        aparecer 0.2s ease;
+}
+
+
+@keyframes aparecer {
+
+    from {
+        opacity:
+            0;
+    }
+
+    to {
+        opacity:
+            1;
+    }
+}
+
+
+/* =====================================================
+   MODAL CONTEÚDO
+===================================================== */
+
+.modal-conteudo {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #151c26,
+            #0d1219
+        );
+
+    border:
+        1px solid
+        rgba(8, 124, 255, 0.35);
+
+    width:
+        100%;
+
+    max-width:
+        520px;
+
+    padding:
+        28px;
+
+    border-radius:
+        18px;
+
+    position:
+        relative;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.65);
+
+    animation:
+        entrarModal 0.25s ease;
+}
+
+
+@keyframes entrarModal {
+
+    from {
+
+        transform:
+            translateY(15px)
+            scale(0.98);
+
+        opacity:
+            0;
+    }
+
+    to {
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        opacity:
+            1;
+    }
+}
+
+
+.modal-conteudo h2 {
+
+    font-size:
+        22px;
+
+    margin-bottom:
+        20px;
+}
+
+
+/* =====================================================
+   FECHAR MODAL
+===================================================== */
+
+.fechar {
+
+    position:
+        absolute;
+
+    right:
+        15px;
+
+    top:
+        13px;
+
+    width:
+        36px;
+
+    height:
+        36px;
+
+    border:
+        none;
+
+    border-radius:
+        9px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color:
+        white;
+
+    font-size:
+        24px;
+
+    cursor:
+        pointer;
+
+    transition:
+        var(--transicao);
+}
+
+
+.fechar:hover {
+
+    background:
+        var(--vermelho);
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+input {
+
+    width:
+        100%;
+
+    padding:
+        13px 14px;
+
+    margin-bottom:
+        10px;
+
+    background:
+        rgba(0, 0, 0, 0.35);
+
+    color:
+        white;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+    border-radius:
+        9px;
+
+    font-size:
+        14px;
+
+    outline:
+        none;
+
+    transition:
+        var(--transicao);
+}
+
+
+input:focus {
+
+    border-color:
+        var(--azul);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(8, 124, 255, 0.10);
+}
+
+
+/* =====================================================
+   BOTÕES DO MODAL
+===================================================== */
+
+.modal-conteudo button:not(.fechar) {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--azul),
+            var(--azul-escuro)
+        );
+
+    color:
+        white;
+
+    border:
+        none;
+
+    padding:
+        11px 16px;
+
+    border-radius:
+        9px;
+
+    cursor:
+        pointer;
+
+    font-weight:
+        600;
+
+    transition:
+        var(--transicao);
+}
+
+
+.modal-conteudo button:not(.fechar):hover {
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 110, 255, 0.20);
+}
+
+
+/* =====================================================
+   LISTA DE ANOTAÇÕES
+===================================================== */
+
+.item-anotacao {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        10px;
+
+    padding:
+        11px;
+
+    margin-bottom:
+        8px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.05);
+
+    border-radius:
+        9px;
+
+    transition:
+        var(--transicao);
+}
+
+
+.item-anotacao:hover {
+
+    border-color:
+        rgba(8, 124, 255, 0.25);
+}
+
+
+.item-anotacao span {
+
+    flex:
+        1;
+
+    font-size:
+        14px;
+
+    color:
+        #e7edf5;
+}
+
+
+.botoes-anotacao {
+
+    display:
+        flex;
+
+    gap:
+        5px;
+}
+
+
+.botoes-anotacao button {
+
+    padding:
+        7px 9px !important;
+
+    min-width:
+        34px;
+}
+
+
+/* =====================================================
+   ESCONDER
+===================================================== */
+
+.escondido {
+
+    display:
+        none !important;
+}
+
+
+/* =====================================================
+   TABLET / CELULAR
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .topo {
+
+        min-height:
+            82px;
+
+        padding:
+            14px 18px;
+    }
+
+
+    .logo h1 {
+
+        font-size:
+            23px;
+
+        letter-spacing:
+            -0.5px;
+    }
+
+
+    .logo span {
+
+        width:
+            42px;
+
+        height:
+            42px;
+
+        font-size:
+            20px;
+    }
+
+
+    .menu {
+
+        right:
+            18px;
+    }
+
+
+    .menu button {
+
+        padding:
+            8px 10px;
+
+        font-size:
+            12px;
+    }
+
+
+    main {
+
+        width:
+            96%;
+
+        margin-top:
+            20px;
+    }
+
+
+    .cabecalho-calendario {
+
+        padding:
+            14px;
+
+        border-radius:
+            14px;
+    }
+
+
+    .cabecalho-calendario h2 {
+
+        font-size:
+            20px;
+    }
+
+
+    .cabecalho-calendario button {
+
+        width:
+            40px;
+
+        height:
+            40px;
+    }
+
+
+    .dia {
+
+        min-height:
+            95px;
+
+        padding:
+            7px;
+    }
+
+
+    .numero-dia {
+
+        font-size:
+            13px;
+    }
+
+
+    .anotacao-preview {
+
+        font-size:
+            10px;
+
+        padding:
+            5px;
+
+        margin-top:
+            3px;
+    }
+
+
+    .semana div {
+
+        padding:
+            9px 2px;
+
+        font-size:
+            9px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .topo {
+
+        min-height:
+            125px;
+
+        padding:
+            14px 12px;
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+    }
+
+
+    .logo {
+
+        justify-content:
+            center;
+    }
+
+
+    .logo h1 {
+
+        font-size:
+            21px;
+    }
+
+
+    .logo span {
+
+        width:
+            39px;
+
+        height:
+            39px;
+
+        font-size:
+            18px;
+    }
+
+
+    .menu {
+
+        position:
+            static;
+
+        width:
+            100%;
+
+        justify-content:
+            center;
+    }
+
+
+    .menu button {
+
+        flex:
+            1;
+
+        max-width:
+            150px;
+    }
+
+
+    .cabecalho-calendario h2 {
+
+        font-size:
+            17px;
+    }
+
+
+    .dia {
+
+        min-height:
+            80px;
+
+        border-radius:
+            8px;
+    }
+
+
+    .anotacao-preview {
+
+        white-space:
+            nowrap;
+
+        overflow:
+            hidden;
+
+        text-overflow:
+            ellipsis;
+    }
+
+
+    .titulo-gastos {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            12px;
+    }
+
+
+    .titulo-gastos button {
+
+        width:
+            100%;
+    }
+
+
+    .modal-conteudo {
+
+        padding:
+            22px;
+
+        border-radius:
+            15px;
+    }
+}
