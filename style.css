@@ -1,5 +1,5 @@
 /* =====================================================
-   CALENDÁRIO DO MACAÉ
+   CALENDÁRIO DO JOHNNY
    DESIGN MODERNO
 ===================================================== */
 
@@ -19,9 +19,9 @@
     --preto-2: #0b0f15;
     --preto-3: #111720;
 
-    --azul: #087cff;
-    --azul-claro: #35a1ff;
-    --azul-escuro: #005dcc;
+    --azul: #ffffff;
+    --azul-claro: #f2f2f2;
+    --azul-escuro: #000000;
 
     --branco: #ffffff;
     --cinza: #9aa4b2;
@@ -53,13 +53,13 @@ body {
 
         radial-gradient(
             circle at top right,
-            rgba(0, 110, 255, 0.14),
+            rgba(255, 255, 255, 0.08),
             transparent 32%
         ),
 
         radial-gradient(
             circle at bottom left,
-            rgba(0, 110, 255, 0.08),
+            rgba(255, 255, 255, 0.05),
             transparent 28%
         ),
 
@@ -99,7 +99,7 @@ body {
 
     border-bottom:
         1px solid
-        rgba(8, 124, 255, 0.25);
+        rgba(255, 255, 255, 0.18);
 
     min-height:
         92px;
@@ -181,7 +181,7 @@ body {
 
     box-shadow:
         0 8px 28px
-        rgba(0, 110, 255, 0.30);
+        rgba(255, 255, 255, 0.18);
 }
 
 
@@ -204,7 +204,7 @@ body {
         linear-gradient(
             90deg,
             #ffffff,
-            #66b4ff,
+            #ffffff,
             #ffffff
         );
 
@@ -219,7 +219,7 @@ body {
 
     text-shadow:
         0 0 25px
-        rgba(8, 124, 255, 0.18);
+        rgba(255, 255, 255, 0.12);
 }
 
 
@@ -288,7 +288,7 @@ body {
 
     box-shadow:
         0 8px 22px
-        rgba(0, 110, 255, 0.25);
+        rgba(255, 255, 255, 0.18);
 }
 
 
@@ -412,7 +412,7 @@ main {
 
     box-shadow:
         0 8px 25px
-        rgba(0, 110, 255, 0.25);
+        rgba(255, 255, 255, 0.18);
 }
 
 
@@ -469,7 +469,7 @@ main {
 
     box-shadow:
         0 6px 20px
-        rgba(0, 110, 255, 0.15);
+        rgba(255, 255, 255, 0.10);
 }
 
 
@@ -541,7 +541,7 @@ main {
 .dia:hover {
 
     border-color:
-        rgba(8, 124, 255, 0.65);
+        rgba(255, 255, 255, 0.55);
 
     transform:
         translateY(-3px);
@@ -552,7 +552,7 @@ main {
         rgba(0, 0, 0, 0.35),
 
         0 0 0 1px
-        rgba(8, 124, 255, 0.08);
+        rgba(255, 255, 255, 0.05);
 }
 
 
@@ -619,7 +619,7 @@ main {
 .anotacao-preview {
 
     background:
-        rgba(8, 124, 255, 0.09);
+        rgba(255, 255, 255, 0.07);
 
     border-left:
         3px solid
@@ -638,7 +638,7 @@ main {
         12px;
 
     color:
-        #dce8f7;
+        #eeeeee;
 
     overflow:
         hidden;
@@ -739,7 +739,7 @@ main {
 
     box-shadow:
         0 8px 25px
-        rgba(0, 110, 255, 0.20);
+        rgba(255, 255, 255, 0.14);
 }
 
 
@@ -750,7 +750,7 @@ main {
 
     box-shadow:
         0 12px 30px
-        rgba(0, 110, 255, 0.30);
+        rgba(255, 255, 255, 0.18);
 }
 
 
@@ -798,7 +798,7 @@ main {
 .gasto:hover {
 
     border-color:
-        rgba(8, 124, 255, 0.45);
+        rgba(255, 255, 255, 0.35);
 
     transform:
         translateX(3px);
@@ -872,7 +872,7 @@ main {
 
     box-shadow:
         0 12px 35px
-        rgba(0, 110, 255, 0.20);
+        rgba(255, 255, 255, 0.14);
 }
 
 
@@ -1155,7 +1155,7 @@ input:focus {
 
     box-shadow:
         0 8px 20px
-        rgba(0, 110, 255, 0.20);
+        rgba(255, 255, 255, 0.14);
 }
 
 
@@ -1201,7 +1201,7 @@ input:focus {
 .item-anotacao:hover {
 
     border-color:
-        rgba(8, 124, 255, 0.25);
+        rgba(255, 255, 255, 0.18);
 }
 
 
